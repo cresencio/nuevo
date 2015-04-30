@@ -1,2 +1,2 @@
 # nuevo
-My personal starter kit for front-end web development. 
+My front-end web development starter kit. 

@@ -1,0 +1,8 @@
+@import 'bootstrap';
+
+h1{
+	color: $brand-success;
+	padding-top: $padding-large-vertical;
+	padding-bottom: $padding-large-vertical;
+	@include gradient-vertical-three-colors();
+}
