@@ -15,6 +15,6 @@ This project depends on Bower, Gulp and SCSS. Be sure you are comfortable using 
 
 5. Run the `gulp` command. 
 
-At this point the initials tasks will be run and a new window should open in your browser. 
+At this point the initials tasks will be run and a webserver should be running at <a href=" http://localhost:8000" target="_blank"> http://localhost:8000</a>. 
 
 Time to get to work!
