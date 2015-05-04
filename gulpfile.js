@@ -1,7 +1,19 @@
 var gulp = require('gulp'),
     prettify = require('gulp-html-prettify'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
     sass = require('gulp-sass'),
 		server = require('gulp-server-livereload');
+
+gulp.task('imagemin', function () {
+  gulp.src('src/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('dist/images'));
+});
 
 gulp.task('html-pretty', function() {
   gulp.src('src/*.html')
@@ -29,7 +41,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('src/**/*', ['html-pretty', 'sass']);
+  gulp.watch('src/**/*', ['html-pretty', 'imagemin', 'sass']);
 });
 
-gulp.task('default', ['html-pretty', 'sass', 'copy-bootstrap-icons', 'webserver', 'watch']);
+gulp.task('default', ['html-pretty', 'imagemin', 'sass', 'copy-bootstrap-icons', 'webserver', 'watch']);
