@@ -1,7 +1,25 @@
 var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    sass = require('gulp-sass'),;
+    sass = require('gulp-sass'),
+    browserSync = require('browser-sync').create();
+
+// Static server, the dist folder
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./dist/"
+        }
+    });
+});
+
+// or...you can set a unique name
+
+// gulp.task('browser-sync', function() {
+//     browserSync.init({
+//         proxy: "yourlocal.dev"
+//     });
+// });
 
 gulp.task('imagemin', function () {
   gulp.src('src/images/*')
