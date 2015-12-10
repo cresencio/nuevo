@@ -1,0 +1,25 @@
+{
+  "name": "nuevo",
+  "version": "1.0.0",
+  "description": "A simple collection of front-end web development dependencies",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cresencio/nuevo.git"
+  },
+  "keywords": [
+    "html",
+    "scss"
+  ],
+  "author": "@Cresencio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cresencio/nuevo/issues"
+  },
+  "homepage": "https://github.com/cresencio/nuevo#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "browser-sync": "^2.9.6",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4"
+  }
+}
